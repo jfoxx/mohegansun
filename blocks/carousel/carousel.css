@@ -66,14 +66,13 @@
     margin: 0;
     color: white;
     position: relative;
-    width: var(--slide-content-width, auto);
     text-align: center;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background: linear-gradient(180deg,rgba(0,21,36,0) 0,rgba(0,21,36,0.7) 55%,rgba(0,21,36,0.8) 85%);
+    background: linear-gradient(180deg,rgb(0 21 36 / 0%) 0,rgb(0 21 36 / 70%) 55%,rgb(0 21 36 / 80%) 85%);
     padding-bottom: 50px;
 
     h2, p {
@@ -104,7 +103,7 @@
             margin-left: 1rem;
             margin-right: 1rem;
 
-            &::hover {
+            &:hover {
                background:  #d60f00;
             }
         }
@@ -208,11 +207,7 @@
       width: 1rem;
       height: 1rem;
     }
-  
-    .carousel .carousel-slide .carousel-slide-content {
-  
-    }
-  
+    
     .carousel .carousel-slide .carousel-slide-content[data-align="justify"] {
       --slide-content-width: auto;
     }
