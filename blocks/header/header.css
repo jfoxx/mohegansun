@@ -4,7 +4,7 @@
     top: 0;
     width: 12.5rem;
     background-color: purple;
-    background-image: url(../../images/MSCT-NAV-BKGD.jpg);
+    background-image: url('../../images/MSCT-NAV-BKGD.jpg');
     height: 100%;
     letter-spacing: .04em;
     z-index: 500;
@@ -12,7 +12,7 @@
     .default-content-wrapper {
       >p {
         padding: 0 5px;
-        border-bottom: 1px solid rgba(256,256,256, .50);
+        border-bottom: 1px solid rgb(256 256 256 / 50%);
         margin-bottom: 0;
       }
 
@@ -25,7 +25,7 @@
 
         >li {
           padding-left: 15px;
-          border-bottom: 1px solid rgba(256,256,256, .50);
+          border-bottom: 1px solid rgb(256 256 256 / 50%);
           padding-top: 10px;
           position: relative;
 
@@ -59,7 +59,8 @@
 
 .section.nav-tools {
     width: 100%;
- > .default-content-wrapper {
+ 
+    > .default-content-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
@@ -105,7 +106,8 @@
       }
   }
 }
-  &:after {
+
+  &::after {
     content: ' ';
     display: block;
     height: 8px;
