@@ -202,6 +202,10 @@ main img {
 }
 
 /* sections */
+
+main {
+  padding-left: 12.5rem;
+}
 main .section {
   padding: 64px 16px;
 }

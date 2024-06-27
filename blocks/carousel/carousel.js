@@ -86,6 +86,18 @@ function createSlide(row, slideIndex, carouselId) {
     slide.setAttribute('aria-labelledby', labeledBy.getAttribute('id'));
   }
 
+  const buttons = slide.querySelectorAll('.button-container');
+  const contentDiv = slide.querySelector('.carousel-slide-content');
+  if (buttons.length > 1 ) {
+    const buttonsWrapper = document.createElement('div');
+    buttonsWrapper.className = 'buttons-wrapper';
+    buttons.forEach(i => {
+        buttonsWrapper.append(i);
+    });
+    contentDiv.append(buttonsWrapper);
+  }
+
+
   return slide;
 }
 

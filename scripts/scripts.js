@@ -55,6 +55,14 @@ function buildAutoBlocks(main) {
   }
 }
 
+function loadTypeKit(kit) {
+  const head = document.querySelector('head');
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = `https://use.typekit.net/${kit}.css`;
+  head.append(link);
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -110,6 +118,7 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  loadTypeKit('oey3xll');
 
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
