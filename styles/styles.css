@@ -99,8 +99,7 @@ h6 {
   width: auto;
   position: relative;
 
-  ~h3 { display: block; margin: 0; }
-
+  
   u {
     text-decoration: none;  
   }
@@ -137,7 +136,14 @@ h2 {
   font-size: var(--heading-font-size-xl);
   color: var(--color-rust);
 }
-h3 { font-size: var(--heading-font-size-l); }
+
+h3 { 
+  font-size: var(--heading-font-size-l); 
+  
+  ~h3 { 
+  display: block; 
+  margin: 0; 
+} }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
