@@ -54,8 +54,7 @@ function sectionClassList(main) {
     const classlist = classData.split(' ');
     classlist.forEach((c) => {
       i.classList.add(c);
-    })
-    
+    });
   });
 }
 
