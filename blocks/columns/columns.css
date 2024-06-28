@@ -35,6 +35,6 @@
 .columns {
   &.frosted {
     padding: 20px;
-    background: rgba(256, 256, 256, 0.4);
+    background: rgb(256 256 256 / 40%);
   }
 }

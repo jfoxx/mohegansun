@@ -44,7 +44,7 @@ function sectionBackgroundImage(main) {
   sections.forEach((i) => {
     const bg = i.getAttribute('data-background-image');
     i.style.backgroundImage = `url(${bg})`;
-  })
+  });
 }
 
 function sectionClassList(main) {
@@ -52,7 +52,7 @@ function sectionClassList(main) {
   sections.forEach((i) => {
     const classlist = i.getAttribute('data-classlist');
     i.classList.add(classlist);
-  })
+  });
 }
 
 function youTubeEmbed(main) {
@@ -65,7 +65,7 @@ function youTubeEmbed(main) {
     i.parentElement.append(iframe);
     i.parentElement.classList.add('youtube');
     i.remove();
-  })
+  });
 }
 
 /**
@@ -117,7 +117,6 @@ export function decorateMain(main) {
   sectionClassList(main);
   sectionBackgroundImage(main);
   youTubeEmbed(main);
-  
 }
 
 /**
