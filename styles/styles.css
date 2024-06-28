@@ -263,10 +263,20 @@ main {
 
 main .section {
   padding: 32px 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &.inset {
     max-width: 900px;
     margin: auto;
+  }
+
+  &.dark {
+    color: white;
+  
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+    }
   }
 }
 
@@ -288,7 +298,6 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
-
 
 /* YouTube video */
 p.youtube {

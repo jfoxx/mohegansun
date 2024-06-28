@@ -50,8 +50,12 @@ function sectionBackgroundImage(main) {
 function sectionClassList(main) {
   const sections = main.querySelectorAll('.section[data-classlist');
   sections.forEach((i) => {
-    const classlist = i.getAttribute('data-classlist');
-    i.classList.add(classlist);
+    const classData = i.getAttribute('data-classlist');
+    const classlist = classData.split(' ');
+    classlist.forEach((c) => {
+      i.classList.add(c);
+    })
+    
   });
 }
 
