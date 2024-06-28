@@ -1,4 +1,9 @@
 /* suppress nested section padding */
+
+.fragment-wrapper {
+  max-width: none !important;
+}
+
 .fragment-wrapper > .section {
   padding-left: 0;
   padding-right: 0;
