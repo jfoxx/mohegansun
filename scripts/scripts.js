@@ -116,7 +116,6 @@ export function decorateMain(main) {
   headingUnderlines(main);
   sectionClassList(main);
   sectionBackgroundImage(main);
-  youTubeEmbed(main);
 }
 
 /**
