@@ -30,6 +30,15 @@ function buildHeroBlock(main) {
   }
 }
 
+function headingUnderlines(main) {
+  const headings = main.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  headings.forEach((i) => {
+    if (i.querySelector('u')) {
+      i.classList.add('underlined');
+    }
+  });
+}
+
 /**
  * load fonts.css and set a session storage flag
  */
@@ -75,6 +84,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  headingUnderlines(main);
 }
 
 /**
