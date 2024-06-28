@@ -62,8 +62,6 @@ function youTubeEmbed(main) {
     const code = url.split('?v=')[1];
     const iframe = document.createElement('iframe');
     iframe.src = `https://www.youtube.com/embed/${code}`;
-    iframe.width = 560;
-    iframe.height = 315;
     i.parentElement.append(iframe);
     i.parentElement.classList.add('youtube');
     i.remove();
