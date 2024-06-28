@@ -55,19 +55,6 @@ function sectionClassList(main) {
   });
 }
 
-function youTubeEmbed(main) {
-  const ytLinks = main.querySelectorAll('a[href*="youtube.com"');
-  ytLinks.forEach((i) => {
-    const url = i.href;
-    const code = url.split('?v=')[1];
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${code}`;
-    i.parentElement.append(iframe);
-    i.parentElement.classList.add('youtube');
-    i.remove();
-  });
-}
-
 /**
  * load fonts.css and set a session storage flag
  */
