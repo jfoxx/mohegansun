@@ -8,6 +8,7 @@
     height: 100%;
     letter-spacing: .04em;
     z-index: 500;
+    text-align: left;
 
     .default-content-wrapper {
       >p {
@@ -22,6 +23,7 @@
         padding-inline-start: 0;
         list-style: none;
         color: white;
+        text-align: left;
 
         >li {
           padding-left: 15px;

@@ -39,6 +39,37 @@ function headingUnderlines(main) {
   });
 }
 
+function sectionBackgroundImage(main) {
+  const sections = main.querySelectorAll('.section[data-background-image]');
+  sections.forEach((i) => {
+    const bg = i.getAttribute('data-background-image');
+    i.style.backgroundImage = `url(${bg})`;
+  })
+}
+
+function sectionClassList(main) {
+  const sections = main.querySelectorAll('.section[data-classlist');
+  sections.forEach((i) => {
+    const classlist = i.getAttribute('data-classlist');
+    i.classList.add(classlist);
+  })
+}
+
+function youTubeEmbed(main) {
+  const ytLinks = main.querySelectorAll('a[href*="youtube.com"');
+  ytLinks.forEach((i) => {
+    const url = i.href;
+    const code = url.split('?v=')[1];
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${code}`;
+    iframe.width = 560;
+    iframe.height = 315;
+    i.parentElement.append(iframe);
+    i.parentElement.classList.add('youtube');
+    i.remove();
+  })
+}
+
 /**
  * load fonts.css and set a session storage flag
  */
@@ -85,6 +116,10 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   headingUnderlines(main);
+  sectionClassList(main);
+  sectionBackgroundImage(main);
+  youTubeEmbed(main);
+  
 }
 
 /**

@@ -196,26 +196,26 @@ button {
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
   padding: 5px 30px;
   text-align: center;
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
   color: var(--background-color);
-  background-color: var(--link-color);
+  background: linear-gradient(90deg,#c94f08 0,#d60f00 100%);
+  border: 2px solid #d60f00;
+  border-radius: 8px;
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background: var(--color-rust);
   cursor: pointer;
 }
 
@@ -256,12 +256,17 @@ main {
 }
 
 main .section {
-  padding: 64px 16px;
+  padding: 32px 16px;
+
+  &.inset {
+    max-width: 900px;
+    margin: auto;
+  }
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 32px;
   }
 }
 
@@ -276,4 +281,22 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+
+/* YouTube video*/
+p.youtube {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 }
